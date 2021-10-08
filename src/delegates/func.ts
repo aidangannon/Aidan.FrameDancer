@@ -1,0 +1,1 @@
+export type Func<TReturn,TParam> = (param: TParam) => TReturn;
