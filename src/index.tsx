@@ -6,6 +6,7 @@ import {FrameStatusEnum} from "./enums/frameStatusEnum";
 import FramesProvider from "./state/framesContext";
 import Frames from "./components/frames";
 import AddFrame from "./components/addFrame";
+import ReactTooltip from "react-tooltip";
 
 ReactDOM.render(
     <FramesProvider>
