@@ -1,15 +1,17 @@
 import React, {Fragment, ReactElement} from "react";
+import styled from "styled-components";
 
-const RenderPage = (props: {children: any}): JSX.Element =>{
-    // TODO: add service
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 8);
+  grid-gap: 20px;
+`;
+
+const RenderPage = ({children}: {children: any}): JSX.Element =>{
     return (
-        <div style={{
-            display: "grid",
-            gridTemplateColumns: "[col1-start] 25% [col1-end col2-start] 25% [col2-end]",
-            gridGap: "grid-gap: 5px",
-        }}>
-            {props.children}
-        </div>
+        <Container>
+            {children}
+        </Container>
     );
 }
 
