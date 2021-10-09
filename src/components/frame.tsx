@@ -7,6 +7,7 @@ import styleBuilder from "./services/styleBuilder";
 import ReactTooltip from "react-tooltip";
 import FramesProvider from "../state/framesContext";
 
+// component that represents a single frame
 const Frame = ({frame}: {frame: FrameDto}): JSX.Element =>{
     const frameStyles: ComponentStylesDto<FrameStatusEnum> = {
         styles:[{

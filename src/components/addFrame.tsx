@@ -2,7 +2,9 @@ import React, {Fragment} from 'react';
 import {useFramesContext} from "../state/framesContext";
 import {FrameStatusEnum} from "../enums/frameStatusEnum";
 import {randomInt} from "crypto";
+import GeneralButton from "./button";
 
+// component that represents a button to add frame
 const AddFrame = (): JSX.Element =>{
     const framesContext = useFramesContext();
     const getFrame = (x: number): FrameStatusEnum => {
@@ -18,30 +20,14 @@ const AddFrame = (): JSX.Element =>{
         }
     }
     return(
-        <div style={{textAlign: "left", margin: "20px", marginBottom: "10px"}}>
-            <button
-                style={{
-                    backgroundColor: "salmon",
-                    padding: "10px",
-                    border: "none",
-                    color: "white",
-                    fontWeight: "bold",
-                    textAlign: "center",
-                    textDecoration: "none",
-                    display: "inline-block",
-                    fontSize: "14px",
-                    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
-                    borderRadius: "3px"
-                }}
-                onClick={x =>
-                    framesContext
-                        .addFrame({
-                            number: framesContext.frames.length - 1,
-                            status: getFrame(Math.floor( Math.random() * 3 ))
-                        })}>
-                Add Frame
-            </button>
-        </div>
+        <GeneralButton
+            onClick={x =>
+                framesContext
+                    .addFrame({
+                        number: framesContext.frames.length - 1,
+                        status: getFrame(Math.floor(Math.random() * 3))
+                    })}
+            content={"Add Frame"}/>
     );
 }
 

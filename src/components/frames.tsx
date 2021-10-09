@@ -5,9 +5,9 @@ import Frame from "./frame";
 
 const renderFrames = (frames: FrameDto[]) => frames.map((x, index) => <Frame frame={{status: x.status, number: x.number}} key={index}/>);
 
+// component that represents a collection of frames
 const Frames = (): JSX.Element =>{
     const framesContext = useFramesContext();
-    console.log(framesContext)
     return(
         <div style={{
             display: "grid",
