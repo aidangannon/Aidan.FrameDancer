@@ -6,14 +6,14 @@ const Button = styled.button`
   padding: 10px;
   border: none;
   color: white;
-  font-weight: bold;
+  font-weight: lighter;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 14px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  border-radius: 3px;
-  margin: 5px;
+  border-radius: 2px;
+  margin: 5px 30px;
 `
 
 // component that represents a button

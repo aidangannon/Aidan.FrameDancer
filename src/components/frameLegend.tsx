@@ -7,10 +7,15 @@ const Container = styled.div`
   text-align: left;
 `;
 
+const Heading = styled.h1`
+  text-align: center;
+  font-weight: lighter;
+`;
+
 const FrameLegend = () =>{
     return(
         <Container>
-            <h1>Legend</h1>
+            <Heading>Legend</Heading>
             <FrameLegendItem frameStatus={FrameStatusEnum.NotStarted}/>
             <FrameLegendItem frameStatus={FrameStatusEnum.InProgress}/>
             <FrameLegendItem frameStatus={FrameStatusEnum.Complete}/>

@@ -8,6 +8,8 @@ const Bar = styled.div`
   padding: 20px;
   background-color: powderblue;
   text-align: center;
+  position: fixed;
+  width: 100%;
 `;
 
 const NavBar = () =>{

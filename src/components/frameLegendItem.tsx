@@ -18,14 +18,22 @@ const Text = styled.p`
   vertical-align: middle;
   margin: 10px;
   font-size: 16px;
+  text-align: left;
+  font-weight: lighter;
+`;
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: right;
 `;
 
 const FrameLegendItem = ({frameStatus}: {frameStatus: FrameStatusEnum}) =>{
     return(
-        <div style={{alignContent: "inline"}}>
+        <Grid style={{alignContent: "inline"}}>
             <Text>{frameStatusToNameParser(frameStatus)}</Text>
             <Frame frameStatus={frameStatus}/>
-        </div>
+        </Grid>
     );
 }
 
