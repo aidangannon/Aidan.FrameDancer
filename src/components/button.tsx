@@ -13,13 +13,15 @@ const Button = styled.button`
   font-size: 14px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   border-radius: 3px;
-  margin: 5px;`
+  margin: 5px;
+`
 
 // component that represents a button
-const GeneralButton = (props: {onClick: React.MouseEventHandler<HTMLButtonElement>, content: string}): JSX.Element =>{
+const GeneralButton = ({onClick, content}: {onClick: React.MouseEventHandler<HTMLButtonElement>, content: string}): JSX.Element =>{
     return(
-        <Button onClick={props.onClick}>
-            {props.content}
+        <Button
+            onClick={onClick}>
+            {content}
         </Button>
     );
 }

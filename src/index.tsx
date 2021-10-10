@@ -9,20 +9,19 @@ import AddFrame from "./components/addFrame";
 import ReactTooltip from "react-tooltip";
 import RenderPage from "./pages/renderPage";
 import RemoveFrame from "./components/removeFrame";
+import styled from "styled-components";
+import NavBar from "./components/navBar";
+import FrameLegend from "./components/frameLegend";
 
 ReactDOM.render(
     <FramesProvider>
+        <NavBar/>
         <RenderPage>
-            <div>
-
+            <div style={{gridColumn: 3, gridRow: 2}}>
+                <FrameLegend/>
             </div>
-            <div>
-                <AddFrame/>
-                <RemoveFrame></RemoveFrame>
+            <div style={{gridColumn: 2, gridRow: 2}}>
                 <Frames/>
-            </div>
-            <div>
-
             </div>
         </RenderPage>
     </FramesProvider>,

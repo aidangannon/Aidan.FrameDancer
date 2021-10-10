@@ -18,6 +18,7 @@ const StyledFrames = styled.div`
   grid-template-rows: repeat(auto-fit, 20px);
   grid-gap: 1px;
   grid-auto-rows: 20px;
+  margin-top: 20px;
 `;
 
 // component that represents a collection of frames

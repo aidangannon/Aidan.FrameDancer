@@ -6,13 +6,15 @@ import {Action, Action1Param} from "../delegates/action";
 interface FramesContext{
     frames: FrameDto[],
     addFrame: Action1Param<FrameDto>,
-    removeLastFrame: Action
+    removeLastFrame: Action,
+    updateFrame: Action1Param<FrameDto>
 }
 
 const FramesContext = createContext<FramesContext>({
     frames: [],
     addFrame: x => {},
-    removeLastFrame: () => {}
+    removeLastFrame: () => {},
+    updateFrame: x => {}
 });
 
 export const useFramesContext = (): FramesContext => useContext(FramesContext);
@@ -33,15 +35,16 @@ const FramesProvider = (props: {children: any}) =>{
         setFrames(currentFrames)
     }
     const updateFrame = (frame: FrameDto) => {
-        const foundFrame = frames.find(x => x.number === frame.number) as FrameDto
-        foundFrame.number = frame.number;
+        const foundFrame = frames[frames.length-1];
         foundFrame.status = frame.status;
+        setFrames([...frames.filter(x => x.number !== foundFrame.number),foundFrame]);
     }
     return(
         <FramesContext.Provider value={{
                 frames: frames,
                 addFrame: addFrame,
-                removeLastFrame: removeLastFrame
+                removeLastFrame: removeLastFrame,
+                updateFrame: updateFrame
             }}>
             {props.children}
         </FramesContext.Provider>
