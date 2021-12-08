@@ -25,7 +25,7 @@ const Container = styled.div`
   padding: 10px;
   text-align: center;
   border-radius: 3px;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.05);
 `;
 
 const MainContainer = styled.div`

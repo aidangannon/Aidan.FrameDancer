@@ -5,12 +5,13 @@ import frameStatusToColorMapper from "./services/frameStatusToColorMapper";
 import frameStatusToNameParser from "./services/frameStatusToNameParser";
 
 const Frame = styled.div`
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 15px;
   background-color: ${({frameStatus}: {frameStatus: FrameStatusEnum}) => frameStatusToColorMapper(frameStatus)};
   display: inline-block;
   vertical-align: middle;
   margin: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.15);
 `;
 
 const Text = styled.p`

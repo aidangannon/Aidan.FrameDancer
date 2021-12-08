@@ -14,6 +14,7 @@ const Button = styled.button`
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   border-radius: 2px;
   margin: 5px 30px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
 `
 
 // component that represents a button

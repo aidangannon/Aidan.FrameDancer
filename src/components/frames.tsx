@@ -15,8 +15,6 @@ const renderFrames = (frames: FrameDto[]) =>
 const StyledFrames = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, 20px);
-  grid-template-rows: repeat(auto-fit, 20px);
-  grid-gap: 1px;
   grid-auto-rows: 20px;
   margin-right: 7.5px;
   margin-bottom: 15px;

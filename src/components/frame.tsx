@@ -10,8 +10,9 @@ import frameStatusToColorMapper from "./services/frameStatusToColorMapper";
 const StyledFrame = styled.div`
   background-color: ${({frameStatus}: {frameStatus: FrameStatusEnum}) => frameStatusToColorMapper(frameStatus)};
   margin: 10px;
-  width: 15px;
-  height: 15px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.15);
 `;
 
 // component that represents a single frame
